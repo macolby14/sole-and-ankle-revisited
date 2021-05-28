@@ -40,9 +40,7 @@ const Header = () => {
             <button onClick={()=>setShowMobileMenu(true)}><Icon id="menu" /></button>
           </Nav>
         </MobileOnly>
-        <DesktopOnly>
          <Side />
-        </DesktopOnly>
       </MainHeader>
 
       <MobileMenu
@@ -85,6 +83,7 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
+  --gap-desktop: 48px;
   gap: var(--gap-desktop);
   margin: 0px var(--gap-desktop);
 
@@ -103,9 +102,10 @@ const Nav = styled.nav`
 const Side = styled.div`
   flex: 1;
 
-  
   @media ${BREAKPOINTS.tabletAndDown}{
-    flex-grow: 0;
+    :last-of-type{
+      flex-grow: 0;
+    }
   }
 `;
 
