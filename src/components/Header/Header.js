@@ -7,6 +7,7 @@ import Icon from "../Icon";
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
 
+
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
 
@@ -36,7 +37,7 @@ const Header = () => {
           <Nav>
             <Icon id="shopping-bag" />
             <Icon id="search" />
-            <Icon id="menu" />
+            <button onClick={()=>setShowMobileMenu(true)}><Icon id="menu" /></button>
           </Nav>
         </MobileOnly>
         <DesktopOnly>
