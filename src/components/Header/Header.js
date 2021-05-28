@@ -90,7 +90,8 @@ const Nav = styled.nav`
   
   @media ${BREAKPOINTS.tabletAndDown}{
     --gap-desktop: 32px;
-    justify-content: space-between;
+    justify-content: row-reverse;
+    margin: 0;
   }
 
   @media ${BREAKPOINTS.mobileAndDown}{
@@ -103,7 +104,7 @@ const Side = styled.div`
 
   
   @media ${BREAKPOINTS.tabletAndDown}{
-    
+    flex-grow: 0;
   }
 `;
 
