@@ -83,7 +83,7 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  --gap-desktop: 48px;
+  --gap-desktop: clamp( 1rem, 7.8vw - 3.25rem, 3rem);
   gap: var(--gap-desktop);
   margin: 0px var(--gap-desktop);
 
