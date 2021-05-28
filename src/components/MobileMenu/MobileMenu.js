@@ -15,7 +15,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
   }
 
   return (
-    <StyledOverlay>
+    <StyledOverlay isOpen={isOpen} onDismiss={onDismiss}>
       <StyledContent aria-label="Mobile Menu">
       <ExitStyle>
         <button onClick={onDismiss}><Icon id="close" /></button>
@@ -48,18 +48,20 @@ const StyledOverlay = styled(DialogOverlay)`
   position: absolute;
   top: 0;
   right: 0;
+  left: 0;
   bottom: 0;
-  width: 300px;
-  background-color: white;
-  padding: 32px;
+  background-color: hsl(220deg 5% 40% / .8);
 `;
 
 const StyledContent = styled(DialogContent)`
-  width: 100%;
+  position: absolute;
+  right: 0;
+  width: 300px;
   height: 100%;
+  padding: 32px;
   display: flex;
   flex-direction: column;
-
+  background-color: ${COLORS.white};
 `;
 
 const StyledNav = styled.nav`
